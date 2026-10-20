@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planet Ceria — Misi Jaga Bumi</title>
+<style>
+:root{--ink:#24324a;--deep:#245c52;--leaf:#3a9b75;--mint:#dff8e9;--sky:#e7f6ff;--sun:#ffd86b;--coral:#ff9f8e;--lilac:#eee8ff;--paper:#fffdf8;--line:#d8e8df;--pink:#ffe8f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f3fbf5;color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1050px;margin:auto;padding:0 18px}
+header{position:relative;overflow:hidden;background:linear-gradient(135deg,#c9f5d9 0%,#dff5ff 58%,#fff0bc 100%);padding:28px 0 24px;border-bottom:4px solid #bce9cc}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.brand{font-weight:900;color:var(--deep);letter-spacing:.4px}.tag{background:white;border:2px solid #bde5cc;border-radius:99px;padding:6px 12px;font-size:12px;font-weight:800;color:var(--deep)}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:22px;align-items:center;padding:25px 0 10px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.02;letter-spacing:-1.8px;margin:8px 0 15px;color:#245c52}
+.hero p{font-size:17px;max-width:640px}.hero-art{font-size:clamp(90px,15vw,150px);text-align:center;filter:drop-shadow(0 8px 0 #245c5212);transform:rotate(-5deg)}
+.sticker{display:inline-block;background:var(--sun);padding:6px 12px;border-radius:12px;font-weight:900;transform:rotate(-2deg);color:#654e00}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}nav button{background:#fff;border:2px solid #cce6d4;border-radius:14px;padding:10px 14px;font:inherit;font-size:14px;font-weight:800;color:var(--deep);cursor:pointer;box-shadow:0 3px 0 #cce6d4;transition:.15s}
+nav button:hover,nav button.active{background:var(--deep);color:white;border-color:var(--deep);transform:translateY(-2px);box-shadow:0 5px 0 #b6d9c7}
+main{padding:25px 0 38px}.panel{display:none;animation:pop .25s ease}.panel.active{display:block}@keyframes pop{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:white;border:2px solid var(--line);border-radius:22px;padding:19px;box-shadow:0 5px 0 #dceee2}.card h2,.card h3{color:var(--deep);margin-top:0}.card h2{font-size:23px}.emoji{font-size:32px;line-height:1.1;margin-bottom:8px}.label{display:inline-block;padding:4px 10px;border-radius:99px;background:var(--mint);font-size:12px;font-weight:900;color:var(--deep)}
+.callout{background:#fff5cc;border:2px dashed #f0c34d;border-radius:17px;padding:15px;margin:12px 0}
+.fact{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.fact .emoji{font-size:27px;min-width:34px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{border-radius:16px;padding:14px;background:var(--sky);border:1px solid #c9e9fb}.step:nth-child(2){background:var(--pink);border-color:#ffd0de}.step:nth-child(3){background:var(--mint);border-color:#bde8ca}
+.action{background:var(--deep);color:#fff;border:0;border-radius:13px;padding:11px 16px;font:inherit;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #b6d9c7}.action:hover{transform:translateY(-1px)}.secondary{background:#fff;color:var(--deep);border:2px solid #bde5cc;box-shadow:none}
+.choice{display:block;width:100%;text-align:left;background:#fff;border:2px solid #dbeae0;border-radius:14px;padding:12px 14px;margin:9px 0;font:inherit;cursor:pointer;color:var(--ink)}.choice:hover{background:#f0fff5;border-color:#78c69b}.choice:disabled{cursor:default}
+.feedback{padding:11px 13px;border-radius:12px;background:#f0f8ff;min-height:45px;font-weight:800;margin:12px 0}.good{background:#dff8e9;color:#176243}.bad{background:#fff0e9;color:#8e422b}
+.progress{height:10px;background:#e6eee8;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#54bd83,#b0df6d);transition:width .3s}
+textarea,input{width:100%;border:2px solid #d7e8dc;border-radius:13px;padding:12px;font:inherit;margin:6px 0 12px;background:#fffdf8}textarea{min-height:100px;resize:vertical}
+.pillrow{display:flex;gap:8px;flex-wrap:wrap}.pillrow span{background:#f0eaff;border:1px solid #ded2ff;padding:6px 10px;border-radius:99px;font-size:13px;font-weight:800}
+footer{background:#245c52;color:white;padding:22px 0;font-size:13px}footer strong{color:#ffe28a}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-art{display:none}.grid,.two,.steps{grid-template-columns:1fr}.card{padding:16px}nav button{flex:1 1 28%}h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="topline"><div class="brand">🌱 PLANET CERIA</div><span class="tag">MISI JAGA BUMI • IPS KELAS VIII</span></div>
+<div class="hero"><div><span class="sticker">HALO, PENJAGA BUMI! ✨</span><h1>Yuk, Kenali<br>Perubahan Iklim!</h1><p>Petualangan mini untuk memahami perubahan iklim, mengenali penyebab dan dampaknya, lalu memilih aksi kecil yang berarti untuk bumi.</p><div class="pillrow"><span>📚 Belajar</span><span>🕵️ Cari tahu</span><span>🌍 Beraksi</span></div></div><div class="hero-art" aria-hidden="true">🌎🌿</div></div>
+<nav aria-label="Menu utama"><button class="active" data-tab="home">🏡 Beranda</button><button data-tab="materi">📖 Materi</button><button data-tab="misi">🔎 Misi Detektif</button><button data-tab="kuis">🎯 Kuis</button><button data-tab="aksi">💚 Aksi & Refleksi</button></nav>
+</div></header>
+<main class="wrap">
+<section id="home" class="panel active">
+<div class="grid">
+<div class="card"><div class="emoji">🌡️</div><span class="label">MISI 1</span><h2>Apa yang terjadi?</h2><p>Kenali perbedaan cuaca dan iklim serta arti perubahan iklim.</p><button class="action" onclick="go('materi')">Mulai belajar →</button></div>
+<div class="card"><div class="emoji">🕵️‍♀️</div><span class="label">MISI 2</span><h2>Jadi detektif iklim</h2><p>Temukan hubungan aktivitas manusia, gas rumah kaca, dan perubahan iklim.</p><button class="action" onclick="go('misi')">Pecahkan misi →</button></div>
+<div class="card"><div class="emoji">🌻</div><span class="label">MISI 3</span><h2>Aksi kecil, dampak baik</h2><p>Pilih langkah realistis yang bisa dilakukan di rumah atau sekolah.</p><button class="action" onclick="go('aksi')">Buat komitmen →</button></div>
+</div>
+<div class="callout"><strong>💡 Tantangan hari ini:</strong> Bisakah kamu menjelaskan satu penyebab perubahan iklim, satu dampaknya, dan satu aksi yang bisa dilakukan?</div>
+<div class="card"><h2>🗺️ Peta petualangan</h2><div class="steps"><div class="step"><b>1. Pahami</b><br>Materi singkat dan contoh.</div><div class="step"><b>2. Selidiki</b><br>Jawab pertanyaan detektif.</div><div class="step"><b>3. Buktikan</b><br>Kuis dan refleksi aksi.</div></div></div>
+</section>
+<section id="materi" class="panel">
+<div class="card"><span class="label">📖 MATERI INTI</span><h2>Perubahan Iklim: Apa dan Mengapa?</h2>
+<div class="fact"><div class="emoji">🌦️</div><div><h3>Cuaca ≠ iklim</h3><p><b>Cuaca</b> adalah keadaan udara dalam waktu singkat, misalnya hujan sore ini. <b>Iklim</b> adalah pola rata-rata keadaan cuaca dalam jangka panjang di suatu wilayah.</p></div></div>
+<div class="fact"><div class="emoji">🌍</div><div><h3>Apa itu perubahan iklim?</h3><p>Perubahan iklim adalah perubahan pola iklim dalam jangka panjang. Pemanasan global—kenaikan suhu rata-rata bumi—merupakan salah satu bagian penting dari perubahan iklim saat ini.</p></div></div>
+<div class="fact"><div class="emoji">🏭</div><div><h3>Apa penyebabnya?</h3><p>Pembakaran batu bara, minyak, dan gas untuk energi/transportasi, kegiatan industri, serta perubahan penggunaan lahan dapat meningkatkan gas rumah kaca. Gas-gas ini menahan lebih banyak panas di sistem bumi.</p></div></div>
+<div class="fact"><div class="emoji">🌧️</div><div><h3>Apa dampaknya?</h3><p>Dampak dapat berupa gelombang panas, perubahan pola hujan, risiko banjir atau kekeringan di sejumlah wilayah, kenaikan muka laut, serta gangguan pada ekosistem dan pertanian. Dampak tidak sama di semua tempat.</p></div></div>
+<div class="callout"><b>Ingat!</b> Efek rumah kaca alami membantu bumi tetap hangat. Masalah muncul ketika aktivitas manusia meningkatkan konsentrasi gas rumah kaca sehingga pemanasan bertambah.</div>
+<div class="small">Untuk tugas sekolah, cocokkan istilah dan penjelasan dengan buku/modul IPS yang digunakan guru. Informasi di halaman ini merupakan materi ringkas umum, bukan data pengamatan lokal.</div>
+</div>
+</section>
+<section id="misi" class="panel">
+<div class="card"><span class="label">🔎 MISI DETEKTIF IKLIM</span><h2>Kasus: Sekolah yang makin panas?</h2><p>Dalam beberapa hari, siswa merasa halaman sekolah sangat panas pada siang hari. Ada yang berkata, “Ini pasti bukti perubahan iklim!”</p><p><b>Tugas detektif:</b> bedakan bukti cuaca sesaat dan bukti perubahan iklim jangka panjang.</p>
+<div class="callout">🧠 <b>Pertanyaan 1:</b> Data apa yang paling tepat untuk menilai perubahan iklim?</div>
+<button class="choice" onclick="caseAnswer(0)">A. Suhu yang terasa panas pada satu siang saja</button>
+<button class="choice" onclick="caseAnswer(1)">B. Catatan suhu dan pola cuaca dalam jangka panjang, dianalisis bersama bukti lain</button>
+<button class="choice" onclick="caseAnswer(2)">C. Satu komentar di media sosial</button>
+<div id="casefeedback" class="feedback" aria-live="polite">Pilih jawaban untuk melihat petunjuk.</div>
+<h3>✍️ Catatan analisismu</h3><label for="caseNote">Tuliskan satu kemungkinan penyebab lokal panas di halaman sekolah dan satu data yang perlu dikumpulkan.</label><textarea id="caseNote" placeholder="Contoh: kurangnya pohon... data yang perlu dikumpulkan..."></textarea><button class="action" onclick="saveCase()">Simpan catatan di halaman</button><p id="caseSaved" class="feedback" aria-live="polite"></p><p class="small">Catatan hanya ditampilkan di halaman saat ini dan tidak dikirim atau disimpan ke server.</p></div>
+</section>
+<section id="kuis" class="panel">
+<div class="card"><span class="label">🎯 CEK PEMAHAMAN</span><h2>Kuis Penjaga Bumi</h2><p id="qcount"></p><div class="progress"><span id="bar"></span></div><h3 id="question"></h3><div id="answers"></div><div id="qfeedback" class="feedback" aria-live="polite">Pilih satu jawaban, ya!</div><p id="score" class="small">Skor: 0</p><button id="next" class="action" onclick="nextQ()" disabled>Soal berikutnya →</button><button class="action secondary" onclick="restart()" style="margin-left:8px">Ulangi kuis ↻</button></div>
+</section>
+<section id="aksi" class="panel">
+<div class="two">
+<div class="card"><span class="label">💚 AKSI NYATA</span><h2>Pilih aksi ramah bumi</h2><p>Pilih satu atau dua aksi yang realistis dilakukan minggu ini.</p>
+<label><input type="checkbox" class="act" value="Mematikan lampu dan perangkat saat tidak digunakan" style="width:auto"> 💡 Mematikan lampu/perangkat saat tidak digunakan</label><br>
+<label><input type="checkbox" class="act" value="Berjalan kaki, bersepeda, atau berbagi kendaraan bila memungkinkan" style="width:auto"> 🚲 Memilih jalan kaki/sepeda/berbagi kendaraan bila memungkinkan</label><br>
+<label><input type="checkbox" class="act" value="Mengurangi sampah makanan dan merencanakan porsi" style="width:auto"> 🍎 Mengurangi sampah makanan</label><br>
+<label><input type="checkbox" class="act" value="Merawat pohon atau tanaman di rumah/sekolah" style="width:auto"> 🌳 Merawat pohon/tanaman</label><br>
+<label><input type="checkbox" class="act" value="Mendiskusikan solusi iklim berbasis data di kelas" style="width:auto"> 🗣️ Mengajak kelas berdiskusi berbasis data</label><br>
+<button class="action" onclick="makePlan()" style="margin-top:14px">Buat rencana aksiku ✨</button><div id="plan" class="feedback" aria-live="polite">Pilih aksi lalu buat rencana.</div></div>
+<div class="card"><span class="label">🌈 REFLEKSI</span><h2>Keluar dengan ide baru</h2><p>Lengkapi kalimat berikut di buku catatan atau kolom ini.</p><label for="reflection">Hari ini aku belajar bahwa…</label><textarea id="reflection" placeholder="Tuliskan pemahamanmu..."></textarea><label for="question2">Satu hal yang masih ingin kutanyakan…</label><textarea id="question2" placeholder="Tuliskan pertanyaanmu..."></textarea><button class="action" onclick="showReflection()">Lihat rangkuman refleksi</button><div id="reflectionOut" class="feedback" aria-live="polite"></div></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><strong>🌎 Misi kita: belajar, peduli, bertindak.</strong><br>Planet Ceria • Prototipe media pembelajaran IPS kelas VIII • Versi awal untuk ditinjau dan diuji. Aksi individu bermanfaat, dan perubahan sistemik serta keputusan bersama juga penting.</div></footer>
+<script>
+const nav=[...document.querySelectorAll('nav button')];
+function go(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));nav.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});}
+nav.forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
+function caseAnswer(i){let msg=i===1?'Tepat! Perubahan iklim dinilai melalui pola jangka panjang dan berbagai bukti, bukan satu hari yang panas.':'Belum cukup. Satu hari panas atau satu komentar tidak dapat menunjukkan pola iklim jangka panjang. Coba pilih data yang lebih menyeluruh.';let el=document.getElementById('casefeedback');el.textContent=msg;el.className='feedback '+(i===1?'good':'bad');}
+function saveCase(){let v=document.getElementById('caseNote').value.trim();document.getElementById('caseSaved').textContent=v?'📝 Catatanmu: '+v:'Isi catatan terlebih dahulu, ya.';}
+const qs=[
+{q:'Manakah contoh cuaca?',a:['Hujan yang turun sore ini','Pola hujan rata-rata selama puluhan tahun','Kecenderungan suhu jangka panjang'],c:0,e:'Benar! Cuaca menggambarkan keadaan atmosfer dalam waktu singkat.'},
+{q:'Aktivitas mana yang dapat meningkatkan gas rumah kaca?',a:['Membakar bahan bakar fosil untuk energi','Menulis catatan di buku','Membaca peta'],c:0,e:'Benar. Pembakaran bahan bakar fosil melepaskan gas rumah kaca seperti karbon dioksida.'},
+{q:'Mengapa satu hari yang sangat panas belum cukup membuktikan perubahan iklim?',a:['Karena perubahan iklim dinilai dari pola jangka panjang dan beragam bukti','Karena suhu tidak pernah berubah','Karena cuaca dan iklim sama persis'],c:0,e:'Tepat. Cuaca harian dapat berubah; tren iklim memerlukan pengamatan jangka panjang.'},
+{q:'Manakah contoh aksi yang dapat membantu mengurangi emisi, jika sesuai kondisi setempat?',a:['Menghemat listrik yang bersumber dari energi fosil','Membiarkan semua lampu menyala','Membuang makanan lebih banyak'],c:0,e:'Betul. Menghemat energi dapat membantu mengurangi emisi, bergantung pada sumber energinya.'}
+];let qi=0,score=0,locked=false,answeredCount=0;
+function renderQ(){locked=false;let q=qs[qi];document.getElementById('qcount').textContent='Soal '+(qi+1)+' dari '+qs.length;document.getElementById('bar').style.width=(qi/qs.length*100)+'%';document.getElementById('question').textContent=q.q;let a=document.getElementById('answers');a.innerHTML='';q.a.forEach((v,i)=>{let b=document.createElement('button');b.className='choice';b.textContent=String.fromCharCode(65+i)+'. '+v;b.onclick=()=>answer(i);a.appendChild(b)});document.getElementById('qfeedback').textContent='Pilih satu jawaban, ya!';document.getElementById('qfeedback').className='feedback';document.getElementById('next').disabled=true;document.getElementById('next').textContent=qi===qs.length-1?'Lihat hasil 🎉':'Soal berikutnya →';document.getElementById('score').textContent='Skor: '+score+' / '+answeredCount+' dijawab';}
+function answer(i){if(locked)return;locked=true;let q=qs[qi];let correct=i===q.c;if(correct)score++;answeredCount++;document.querySelectorAll('#answers button').forEach((b,j)=>{b.disabled=true;if(j===q.c)b.style.borderColor='#3a9b75';});let el=document.getElementById('qfeedback');el.textContent=(correct?'🎉 Hebat! ':'💡 Yuk belajar lagi! ')+q.e;el.className='feedback '+(correct?'good':'bad');document.getElementById('bar').style.width=((qi+1)/qs.length*100)+'%';document.getElementById('score').textContent='Skor: '+score+' / '+answeredCount+' dijawab';document.getElementById('next').disabled=false;}
+function nextQ(){if(!locked)return;if(qi<qs.length-1){qi++;renderQ()}else{document.getElementById('question').textContent='Misi selesai! 🌟';document.getElementById('answers').innerHTML='';document.getElementById('qfeedback').textContent='Skor akhir: '+score+' dari '+qs.length+'. Baca lagi materi pada jawaban yang belum tepat, lalu coba ulangi.';document.getElementById('qfeedback').className='feedback good';document.getElementById('next').disabled=true;document.getElementById('next').textContent='Selesai ✓';document.getElementById('bar').style.width='100%';}}
+function restart(){qi=0;score=0;answeredCount=0;renderQ();}
+function makePlan(){let a=[...document.querySelectorAll('.act:checked')].map(x=>x.value);document.getElementById('plan').textContent=a.length?'🌱 Rencana minggu ini: '+a.join('; ')+'. Pilih waktu pelaksanaan dan cek kembali di akhir minggu.':'Pilih minimal satu aksi yang realistis, ya!';}
+function showReflection(){let a=document.getElementById('reflection').value.trim(),b=document.getElementById('question2').value.trim();document.getElementById('reflectionOut').textContent='📌 Yang kupelajari: '+(a||'(belum diisi)')+' | Pertanyaan: '+(b||'(belum diisi)');}
+renderQ();
+</script>
+</body></html>
